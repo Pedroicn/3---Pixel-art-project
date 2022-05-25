@@ -11,3 +11,19 @@ window.onload = selecionaCorInicial
 function selecionaCorInicial() {
   document.getElementById('black').className = 'color selected'
 }
+
+function setColor() {
+  let paletaCores = document.getElementById('color-palette');
+
+
+  paletaCores.addEventListener('click', function(event) {
+    let selecionado = document.querySelector('.selected')
+    if(event.target.className === 'color') {
+      selecionado.classList.remove('selected')
+      event.target.classList.add('selected')
+      
+    }
+
+  })
+}
+setColor();
