@@ -20,3 +20,15 @@
 #orange {
   background-color: orange;
 }
+
+#pixel-board {
+  width: 500px;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  background-color: white;
+}
