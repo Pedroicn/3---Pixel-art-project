@@ -11,6 +11,21 @@ window.onload = selecionaCorInicial
 
 function selecionaCorInicial() {
   document.getElementById('black').className = 'color selected'
+  paletaAzul = document.getElementById('blue');
+  paletaVermelha = document.getElementById('red');
+  paletaLaranja = document.getElementById('orange');
+  let a = parseInt(Math.random() * 255);
+  let b = parseInt(Math.random() * 255);
+  let c = parseInt(Math.random() * 255);
+  let d = parseInt(Math.random() * 255);
+  let e = parseInt(Math.random() * 255);
+  let f = parseInt(Math.random() * 255);
+  let g = parseInt(Math.random() * 255);
+  let h = parseInt(Math.random() * 255);
+  let i = parseInt(Math.random() * 255);
+  paletaAzul.style.backgroundColor = 'rgb(' + a + ',' + b + ',' + c + ')';
+  paletaVermelha.style.backgroundColor = 'rgb(' + d + ',' + e + ',' + f + ')';
+  paletaLaranja.style.backgroundColor = 'rgb(' + g + ',' + h + ',' + i + ')';
 }
 
 // seleciona cor quando clicado
