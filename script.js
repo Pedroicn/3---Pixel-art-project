@@ -86,12 +86,21 @@ function createNewBoard() {
     for(let i = 0; i < quadroPixel.length; i += 1) {
 
       quadroPixel[i].remove();
+      
     }
+    if(input.value < 5) {
+      input.value = 5
+    }
+    if(input.value > 50) {
+      input.value = 50
+    }
+    sectionBoard.style.width = input.value*43 + 'px'
     for(let j = 0; j < input.value ** 2; j += 1) {
       let pixel = document.createElement('div');
       pixel.className = 'pixel';
       sectionBoard.appendChild(pixel);
     }
+    quadroPixel = document.querySelectorAll(".pixel")
   }
   
 }
