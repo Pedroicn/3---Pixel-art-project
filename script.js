@@ -27,3 +27,32 @@ function setColor() {
   })
 }
 setColor();
+
+// function pegaCor() {
+//   // getComputedStyle(selected).backgroundColor
+//   let paletaCores = document.getElementById('color-palette');
+//   let cor = getComputedStyle(selected).backgroundColor
+//   paletaCores.addEventListener('click', function(event) {
+    
+
+//   })
+
+  
+// }
+// pegaCor();
+
+
+
+
+function alteraCor() {
+  let boardPixels = document.getElementById('pixel-board')
+  
+  
+  boardPixels.addEventListener('click', function(event) {
+  let selecionado = document.querySelector('.selected')
+  let cssObj = window.getComputedStyle(selecionado, null);
+  let cor = cssObj.getPropertyValue("background-color");
+    event.target.style.backgroundColor = cor
+  })
+}
+alteraCor();
