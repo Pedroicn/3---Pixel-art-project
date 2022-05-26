@@ -39,8 +39,12 @@ function alteraCor() {
   let selecionado = document.querySelector('.selected')
   let cssObj = window.getComputedStyle(selecionado, null);
   let cor = cssObj.getPropertyValue("background-color");
-
+  let pixels = document.getElementsByClassName('pixel')
+  if(event.target.className === 'pixel') {
     event.target.style.backgroundColor = cor;
+  }
+
+    
   })
 }
 alteraCor();
@@ -59,4 +63,40 @@ function createClearButton() {
 }
 createClearButton();
 
-// newButton.addEventListener('click', createClearButton)
+// remove quadro
+ 
+  let quadroPixel = document.querySelectorAll(".pixel")
+  let generateButton = document.getElementById("generate-board");
+  let input = document.getElementById('board-size');
+  let sectionBoard = document.getElementById('pixel-board');
+  let comprimentoPixel = input.value;
+
+
+  generateButton.addEventListener('click', createNewBoard)
+  generateButton.addEventListener('click', removeBoard)
+
+function removeBoard() {
+  
+}    
+    
+function createNewBoard() {  
+  if(input.value === '') {
+    window.alert('Board inválido!')
+  } else {
+    for(let i = 0; i < quadroPixel.length; i += 1) {
+
+      quadroPixel[i].remove();
+    }
+    for(let j = 0; j < input.value ** 2; j += 1) {
+      let pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      sectionBoard.appendChild(pixel);
+    }
+  }
+  
+}
+
+
+
+
+ 
